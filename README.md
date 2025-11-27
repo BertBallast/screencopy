@@ -1,10 +1,10 @@
 # screencopy
-Is rust usable for end-user applications? Is rust for system programming only? This project is designed to answer that question.
+Is rust suitable for end-user applications? Is rust for system programming only? This project is designed to answer that question.
 
-Rust is a system programming language focusing on safety, speed and concurrency. Its executables run under several operating systems, all with the same source code, and without the need for a runtime module.
+Rust is a system programming language focusing on safety, speed and concurrency. The same source code can be compiled under several operating systems. Executables run without a separate 'runtime environment'. These properties draw my intention.
 
-Is it suitable for en-user applications?
+But Rust is intended for system programming. So, is it suitable for end-user applications also? To answer that question, this project was started, using some available crates, e.g. epframe.rs for a grahic user interface.
 
-As a try-out this project was started.
+To make something useful, a sceenshot program was build, with some extra features, like adding arrows and annotations within the same application.
 
-The result is a sceenshot program, as there are many. But some unusual properties where added. These are the possibility to add arrows with annotations within the same application. 
+The answer: Yes, much is possible, but there are some unexpected drawbacks.

@@ -6,3 +6,8 @@ Rust is a system programming language focusing on safety, speed and concurrency.
 But Rust is intended for system programming. So, is it suitable for end-user applications also? To answer that question, this project was started, using some available crates, e.g. epframe.rs for a grahic user interface.
 
 The answer: Yes, much is possible, but there are some unexpected drawbacks.
+
+NB: Comments in the code are im dutch, and also the names of most variables - However, in the near future it will be translated to englisch 
+NB: 'Rust by example', the most accessible way to learn the language, has many small examples. This projects many aspects together.
+NB: in the directory 'release' you will find the compiled executable for Windows
+

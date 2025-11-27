@@ -1,0 +1,34 @@
+[package]
+name = "schermkopie"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = "0.33.2"
+dirs-next = "2.0.0" # om de juiste directory voor de desktop te kunnen opvragen
+egui_extras = { version = "0.33.2", features = ["all_loaders"] }
+image = { version = "0.25.9" }                                   # vrijwel alle codecs zijn beschikbaar
+ferrishot_xcap = "0.4.1"
+#xcap vanaf 4.1 geeft Monitor-eigenschappen steeds als Result<<T>,Error>; dat is niet werkbaar zolang er geen goede doc is en die ontbreekt; maar nu ishet wel gelukt
+#xcap 0.6.2 heeft extra librarys nodig die ik niet te pakken kan krijgen; zie de offciele documentatie in docs.rs xcap
+#xcap 4.1 schijnt omgezet te zijn in ferri_xcap, met enkele wikzigingen die zijn doorgevoerd.
+#scrap en screenshot zouden alternatieven zijn ...
+screen-info = "0.0.1"
+mouse-rs = "0.4.2"
+root = "0.1.1"
+#chrono = "0.4.41"
+#time = "0.3.37"
+#khronos-egl = {version = "6.0.0", features= ["static"]}
+#crossterm_cursor = "0.4.0"
+
+
+#dit was nodig voor eframe "0.30.0":
+#PS I:\Rust\Schermkopie> cargo update profiling
+#en dan is dit het 'resultaat'
+#    Updating crates.io index
+#     Locking 2 packages to latest compatible versions
+#    Updating profiling v1.0.15 -> v1.0.16
+#    Updating profiling-procmacros v1.0.15 -> v1.0.16
+#note: pass `--verbose` to see 193 unchanged dependencies behind latest
+#maar begrijpen doe ik het niet
+#bron: https://github.com/emilk/egui/issues/5491

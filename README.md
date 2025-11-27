@@ -1,5 +1,5 @@
 # screencopy
-A screenshot program, with feautures to add arrows and annotations. A project intended to check the suitability of the rust language for end-user applications.  
+A screenshot program, with features to add arrows and annotations. A project intended to check the suitability of the rust language for end-user applications.  
 
 Rust is a system programming language focusing on safety, speed and concurrency. The same source code can be compiled under several operating systems. Executables run without a separate 'runtime environment'. These properties draw my intention.
 

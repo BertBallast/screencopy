@@ -78,7 +78,7 @@ impl UitsnedeApp {
 /// de inhoud van de viewport wordt gecreerd en bijgewerkt door de functie 'update' die een eigenschap is van 'Schermbeeld'
 /// nadat eerst alle gewenst eigenschappen zijn vastgelegd in de variabele 'options'
 pub fn uitsnede_app() {
-    if klaar_voor_uitsnede() {return};
+    if niet_klaar_voor_uitsnede() {return};
     let doelscherm = DOELSCHERM.with(|v| v.clone()).into_inner();  // scherm waarop wordt gewerkt
     // variabelen in HOOFDLETTERS zijn gedefinieerd als globale variabelen in globaal.rs
     // als Thread_local! static. Hun waarde krijgen ze met xxxx.set(waarde)
@@ -132,7 +132,7 @@ pub fn uitsnede_app() {
     // pas dan eindigt ook deze functie 'uitsnede_app'
 }
 
-fn klaar_voor_uitsnede() -> bool {
+fn niet_klaar_voor_uitsnede() -> bool {
     if BESTAAND_BEELD.get() == false 
     && BEELD_OPTION.with(|v|{v.clone()}).into_inner().is_none() {      // geen argument gevonden op de command-line; dus er moet eerst een screenshot worden gemaakt
         lees_huidige_scherminhoud();        // opslaan van een kopie van het gehele scherm in de variabele BEELD_OPTION 
@@ -582,5 +582,6 @@ pub fn naar_uitsnede(ctx: Context) {
     RETOUR_NAAR_UITSNEDE.set(false);
     // pijlen_app (of ingeval van RETOUR_NAAR_UITSNEDE uitsnede_app) wordt afgesloten, en uitsnede wordt opnieuw opgestart 
 }
+
 
 

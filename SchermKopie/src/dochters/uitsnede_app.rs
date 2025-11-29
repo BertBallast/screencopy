@@ -139,8 +139,6 @@ fn niet_klaar_voor_uitsnede() -> bool {
     } else {  // BESTAND_BEELD.get() == true!
         if RETOUR_NAAR_UITSNEDE.get() == false {
             MAAK_UITSNEDE.set(false);
-        } else {
-              
         }
     }
     if MAAK_UITSNEDE.get() == false {
@@ -582,6 +580,7 @@ pub fn naar_uitsnede(ctx: Context) {
     RETOUR_NAAR_UITSNEDE.set(false);
     // pijlen_app (of ingeval van RETOUR_NAAR_UITSNEDE uitsnede_app) wordt afgesloten, en uitsnede wordt opnieuw opgestart 
 }
+
 
 
 

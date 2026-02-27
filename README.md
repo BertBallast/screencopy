@@ -13,5 +13,5 @@ Remarks
 * The crate mouse-rs is used. In linux Debian and Ubuntu it needs installation of the library libxdo-dev with the command ‘sudo apt-get install libxdo-dev’
 * In linux-wayland the function ‘.with_position’ of the egui-ViewportBuilder is documented as ‘unsupported’. This means that all viewports are positioned in the center of the screen.
 * In linux-X11 there is some inconsistency in the use of ‘scale’ and ‘pixels_per_point’. This needs some extra attention.
-* In linux the ‘Virtual Keyboard’ should be set to ‘None’, in ‘System settings>Keyboard>Virtual Keyboard’
+* In linux-wayland the ‘Virtual Keyboard’ should be set to ‘None’, in ‘System settings>Keyboard>Virtual Keyboard’
 

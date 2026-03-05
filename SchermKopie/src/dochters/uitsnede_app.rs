@@ -26,7 +26,7 @@ impl eframe::App for UitsnedeApp {
     /// in de vorm van een texturehandle, een viewport-vriendelijke variant van een image-buffer
     fn update(&mut self, ctx: &Context, _frame: &mut eframe::Frame) {
         if GESTART.get() != Gestart::Running {println!("BEGIN UPDATE FUNCTIE ronde: {:?}  {:4.1}  {:4.1}", GESTART.get(), hoofdscherm().scale(), ctx.pixels_per_point());}
-            //ctx.set_pixels_per_point(1.0);    // in linux is deze gewoonlijk 1.5 en dat geeft een vervormd beeld
+        ctx.set_pixels_per_point(1.0);    // in linux is deze gewoonlijk 1.5 en dat geeft een vervormd beeld
         opslaan_uitsnede(self, ctx.clone());  // opslaan van de gekozen uitsnede, vanuit de imagebuffer
         andere_functie(ctx.clone());
         if TEXT_INPUT.get() == false {
@@ -565,6 +565,7 @@ pub fn naar_uitsnede(ctx: Context) {
     RETOUR_NAAR_UITSNEDE.set(false);
     // pijlen_app (of ingeval van RETOUR_NAAR_UITSNEDE uitsnede_app) wordt afgesloten, en uitsnede wordt opnieuw opgestart 
 }
+
 
 
 

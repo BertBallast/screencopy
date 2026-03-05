@@ -117,7 +117,7 @@ impl PijlenApp {
 impl eframe::App for PijlenApp {
     /// De update-functie roept de hulp-windows met hun functionaliteiten aan.
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-        //ctx.set_pixels_per_point(1.0);
+        ctx.set_pixels_per_point(1.0);
         if TEXT_INPUT.get() == false && PIJL_EDIT.get() == false {
             ctx.send_viewport_cmd(eframe::egui::ViewportCommand::Focus); // zorgt dat focus altijd aan is, zo nee dan geen keyboard input - bijv functietoetsen en shortcuts
         }
@@ -706,3 +706,4 @@ fn input_menu(zelf: &mut PijlenApp, knoppen: Vec<Knop>, muis: Option<Pos2>) -> b
     }
     false
 }
+
